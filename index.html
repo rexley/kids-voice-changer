@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#6d5dfc" />
+  <title>Voice Lab</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">🎙️ KIDS' VOICE CHANGER</p>
+        <h1>Voice Lab</h1>
+        <p class="subtitle">Record a silly phrase, pick a voice, and hear yourself transform.</p>
+      </div>
+      <button id="helpBtn" class="icon-btn" aria-label="How to use">?</button>
+    </header>
+
+    <section class="card recorder-card">
+      <div class="phrase-row">
+        <div>
+          <span class="label">Try saying</span>
+          <div id="phrase" class="phrase">“The purple penguin stole my pancakes!”</div>
+        </div>
+        <button id="newPhraseBtn" class="secondary-btn">🎲 New phrase</button>
+      </div>
+
+      <div id="meter" class="meter" aria-hidden="true">
+        <div class="meter-fill"></div>
+      </div>
+
+      <div class="record-controls">
+        <button id="recordBtn" class="record-btn">● Start recording</button>
+        <button id="stopBtn" class="stop-btn" disabled>■ Stop</button>
+        <span id="timer" class="timer">00:00</span>
+      </div>
+      <p id="status" class="status">Microphone stays in your browser. Nothing is uploaded.</p>
+    </section>
+
+    <section class="card" id="studioCard">
+      <div class="section-heading">
+        <div>
+          <span class="label">Step 2</span>
+          <h2>Pick a voice</h2>
+        </div>
+        <button id="playBtn" class="primary-btn" disabled>▶ Play voice</button>
+      </div>
+
+      <div id="presetGrid" class="preset-grid"></div>
+
+      <div class="tweaks">
+        <h3>Make it even sillier</h3>
+        <label>
+          <span>Pitch / speed</span>
+          <input id="rateSlider" type="range" min="0.55" max="1.7" value="1" step="0.01" />
+          <output id="rateValue">1.00×</output>
+        </label>
+        <label>
+          <span>Echo</span>
+          <input id="echoSlider" type="range" min="0" max="0.75" value="0" step="0.01" />
+          <output id="echoValue">0%</output>
+        </label>
+        <label>
+          <span>Robot</span>
+          <input id="robotSlider" type="range" min="0" max="1" value="0" step="0.01" />
+          <output id="robotValue">0%</output>
+        </label>
+      </div>
+
+      <div class="actions">
+        <button id="originalBtn" class="secondary-btn" disabled>🔊 Play original</button>
+        <button id="downloadBtn" class="secondary-btn" disabled>⬇ Download changed voice</button>
+        <button id="clearBtn" class="ghost-btn" disabled>↺ Record again</button>
+      </div>
+    </section>
+
+    <section class="card tips-card">
+      <h2>Phrase ideas</h2>
+      <div class="phrase-chips" id="phraseChips"></div>
+    </section>
+  </main>
+
+  <dialog id="helpDialog">
+    <button id="closeHelpBtn" class="dialog-close" aria-label="Close">×</button>
+    <h2>How to use Voice Lab</h2>
+    <ol>
+      <li>Tap <strong>Start recording</strong> and allow microphone access.</li>
+      <li>Say a phrase, then tap <strong>Stop</strong>.</li>
+      <li>Choose a fun voice and press <strong>Play voice</strong>.</li>
+      <li>Adjust the sliders, or download your changed voice as a WAV file.</li>
+    </ol>
+    <p>Everything happens on this device. Voice Lab does not send recordings to a server.</p>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>

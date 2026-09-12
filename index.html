@@ -2,9 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <meta name="theme-color" content="#6d5dfc" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Voice Lab" />
+  <meta name="mobile-web-app-capable" content="yes" />
   <title>Voice Lab</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="apple-touch-icon" href="icon-180.png" />
+  <link rel="icon" href="icon-180.png" type="image/png" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -92,6 +99,7 @@
       <li>Adjust the sliders, or download your changed voice as a WAV file.</li>
     </ol>
     <p>Everything happens on this device. Voice Lab does not send recordings to a server.</p>
+    <p><strong>On iPhone/iPad:</strong> open this page in Safari, tap Share, then choose <strong>Add to Home Screen</strong>.</p>
   </dialog>
 
   <script src="app.js"></script>

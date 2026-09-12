@@ -1,0 +1,18 @@
+{
+  "name": "Voice Lab — Kids' Voice Changer",
+  "short_name": "Voice Lab",
+  "description": "Record a phrase and transform it with fun voice effects.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f6f4ff",
+  "theme_color": "#6d5dfc",
+  "icons": [
+    {
+      "src": "icon-180.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
